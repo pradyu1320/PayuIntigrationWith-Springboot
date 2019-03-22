@@ -18,7 +18,7 @@ public class PaymentUtil {
 		String txnId = "Dev" + hashCal("SHA-256",randomId).substring(0,12);
 		paymentDetail.setTxnId(txnId);
 		String hash="";
-		String hashSequence = "key|txnId|amount|productInfo|firstname|email|||||||||";
+		String hashSequence = "key|txnid|amount|productInfo|firstname|email|||||||||||";
 		hashString = hashSequence.concat(paymentSalt);
 		hashString = hashSequence.replace("key", paymentKey);
 		hashString = hashSequence.replace("txnid", txnId);
