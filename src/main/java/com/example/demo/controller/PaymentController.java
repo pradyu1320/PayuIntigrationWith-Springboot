@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,7 +13,7 @@ import com.example.demo.model.PaymentCallback;
 import com.example.demo.model.PaymentDetail;
 import com.example.demo.model.PaymentMode;
 import com.example.demo.service.PaymentService;
-
+@CrossOrigin(origins="http://localhost:4200")
 @RestController
 @RequestMapping("/payment")
 public class PaymentController {
